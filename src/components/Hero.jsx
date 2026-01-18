@@ -1,4 +1,5 @@
 function Hero(){
+
  return(
     <div className="w-full h-96 bg-azul flex gap-64 items-center justify-center">
         <div>
