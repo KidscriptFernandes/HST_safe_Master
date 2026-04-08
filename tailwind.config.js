@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors :{
-        azul:'#1977bc',
+        fundo_principal:'#1977bc',
       }
     },
   },

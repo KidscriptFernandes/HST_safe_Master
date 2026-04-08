@@ -1,18 +1,31 @@
+import Botao from "../ui/button"
 function Hero(){
 
  return(
-    <div className="w-full h-96 bg-azul flex gap-64 items-center justify-center">
-        <div>
-        <h1 className="text-4xl">Venha Cuidar da sua Saude 
-        <br /> Monitorize todos os dias Com Fp </h1>
-        <div className="flex items-center justify-around mt-12">
-            <button className="w-56  text-md h-12 bg-white  text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-100 transition">Começar agora</button>
-            <button className="w-56  text-md h-12 bg-gray-400 rounded-xl">Saber mais</button>
-        </div>
-    </div>
-    <div className="bg-black w-96 h-96 rounded-full">
+    <div className="w-full h-screen bg-white flex justify-center">
+        <div className="w-6/12 h-5/6 bg-white flex flex-col items-center justify-center gap-14">
+                
+               <div> 
+                    <h1 className=" font-segoe text-5xl">Monitore sua <span className="text-green-600">saúde</span> <br />
+                     localize seus serviços <br />
+                     de Forma rápida e <span className="text-green-600">eficiente</span></h1>
+                </div> 
+                <div className="flex items-center justify-center gap-6">
+                   <Botao text="Localizar um serviço"
+                   cor="bg-green-600"
+                   altura="py-4"
+                   largura="px-14"/>
+                     <Botao text="cuide da saúde"
+                   cor="bg-green-600"
+                   altura="py-4"
+                   largura="px-14"/>
+                </div>
+              
 
-    </div>
+
+        </div>
+        <div className="w-6/12 h-5/6 bg-red-500"></div>
+     
     </div>
 
  )   
