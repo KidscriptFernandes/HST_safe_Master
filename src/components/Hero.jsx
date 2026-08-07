@@ -1,12 +1,13 @@
 import Botao from "../ui/button"
+import img_hero from "../assets/img/Female chef clothing apparel person _ Premium AI-generated image.png";
 function Hero(){
 
  return(
-    <div className="w-full h-screen bg-white flex justify-center">
-        <div className="w-6/12 h-5/6 bg-white flex flex-col items-center justify-center gap-14">
+    <div className="w-full h-screen bg-white flex flex-col justify-center xl:flex-row">
+        <div className="xl:w-6/12 h-5/6 bg-white flex flex-col items-center justify-center gap-14">
                 
                <div> 
-                    <h1 className=" font-segoe text-5xl">Monitore sua <span className="text-green-600">saúde</span> <br />
+                    <h1 className=" font-segoe text-5xl">Monitore sua <span className="text-green-600">saúde,</span> <br />
                      localize seus serviços <br />
                      de Forma rápida e <span className="text-green-600">eficiente</span></h1>
                 </div> 
@@ -24,8 +25,10 @@ function Hero(){
 
 
         </div>
-        <div className="w-6/12 h-5/6 bg-red-500"></div>
-     
+        <div className="w-6/12 h-5/6 bg-red-500">
+        <img src={img_hero} alt="" srcset="" />
+        </div>
+     <hr className="shadow-xl" />
     </div>
 
  )   
