@@ -1,18 +1,14 @@
 import './index.css'
-import Hero from "./components/Hero"
-import Header from "./components/header"
-import About from "./components/about"
-import List from "./components/todo_list"
-import Epi from "./components/epi_detection"
-
-
+import Epi from './components/epi_detection'
+import RoboflowCamera from './components/RoboflowCamera'
 
 function App() {
   return (
     <>
-   <Epi/>
-
-   
+      <Epi />
+      <div className="bg-slate-950 px-4 py-8">
+        <RoboflowCamera />
+      </div>
     </>
   )
 }
