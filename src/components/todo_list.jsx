@@ -1,6 +1,16 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 export default function Todo() {
+  const url="http://localhost:3333/user"
+    async function getUsers() {
+      const response= await fetch(url)
+      console.log(response)
+    
+  }
+useEffect(()=>{
+getUsers()
+},[])
+ 
+
   const [dados, setDados] = useState([]); // lista de tarefas
   const [tarefa, setTarefa] = useState(""); // texto do input
   const [time, setTime] = useState(""); // hora do input
@@ -64,6 +74,7 @@ export default function Todo() {
           <h1 className="text-2xl text-slate-950 text-center font-bold">Tarefas actuais</h1>
           
           {/* LISTAGEM */}
+
           <div className="w-full flex flex-col gap-3">
             {dados.length === 0 ? (
               <p className="text-center text-gray-400">Nenhuma tarefa ainda</p>
