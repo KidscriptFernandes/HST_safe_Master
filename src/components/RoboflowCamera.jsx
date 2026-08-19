@@ -464,102 +464,374 @@ function RoboflowCamera() {
     };
   });
 
-  const safetyToneClass = {
-    danger: "border-red-400/50 bg-red-900/20",
-    warning: "border-yellow-400/50 bg-yellow-900/20",
-    success: "border-green-400/50 bg-green-900/20",
-  }[safetyStatus.level];
-
-  const safetyTextClass = {
-    danger: "text-red-200",
-    warning: "text-yellow-200",
-    success: "text-green-200",
+  const safetyColors = {
+    danger:  { border: "rgba(239,68,68,0.35)",  bg: "rgba(239,68,68,0.08)",  text: "#fca5a5", dot: "#ef4444", icon: "⚠️" },
+    warning: { border: "rgba(234,179,8,0.35)",   bg: "rgba(234,179,8,0.08)",  text: "#fde047", dot: "#eab308", icon: "⚡" },
+    success: { border: "rgba(34,197,94,0.35)",   bg: "rgba(34,197,94,0.08)",  text: "#86efac", dot: "#22c55e", icon: "✅" },
   }[safetyStatus.level];
 
   return (
-    <div className={`w-full max-w-5xl mx-auto rounded-2xl border p-4 shadow-2xl ${safetyToneClass}`}>
-      <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+    <div
+      className="hst-fade-up"
+      style={{
+        width: "100%",
+        background: "rgba(15,32,64,0.6)",
+        border: `1px solid ${safetyColors.border}`,
+        borderRadius: "20px",
+        padding: "28px",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+        boxShadow: `0 0 60px ${safetyColors.bg}, 0 16px 56px rgba(0,0,0,0.5)`,
+        transition: "box-shadow 0.5s ease, border-color 0.5s ease",
+      }}
+    >
+      {/* ── Header row ── */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "16px",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: "24px",
+        }}
+      >
         <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-orange-400">Roboflow</p>
-          <h2 className="text-xl font-bold text-white">Detecção em tempo real</h2>
+          <p
+            style={{
+              margin: 0,
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#fb923c",
+              marginBottom: "4px",
+            }}
+          >
+            HST Safe Master
+          </p>
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "22px",
+              fontWeight: 800,
+              color: "#fff",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Detecção em Tempo Real
+          </h2>
         </div>
 
-        <div className="flex gap-3">
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
           <button
+            id="btn-start-camera"
             type="button"
             onClick={startCamera}
             disabled={isConnecting || status === "Câmera ativa"}
-            className="rounded-lg bg-orange-500 px-4 py-2 font-semibold text-white transition hover:bg-orange-400 disabled:cursor-not-allowed disabled:bg-slate-600"
+            className="hst-glow-btn"
+            style={{ padding: "10px 22px", fontSize: "14px", display: "flex", alignItems: "center", gap: "8px" }}
           >
-            Iniciar câmera
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10" opacity="0.25"/>
+              <polygon points="10,8 16,12 10,16"/>
+            </svg>
+            {isConnecting ? "A conectar..." : "Iniciar câmera"}
           </button>
           <button
+            id="btn-stop-camera"
             type="button"
             onClick={() => stopCamera(false)}
-            className="rounded-lg border border-slate-500 bg-slate-800 px-4 py-2 font-semibold text-white transition hover:border-slate-400"
+            className="hst-outline-btn"
+            style={{ padding: "10px 20px", fontSize: "14px", display: "flex", alignItems: "center", gap: "8px" }}
           >
-            Parar câmera
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+            </svg>
+            Parar
           </button>
         </div>
       </div>
 
-      <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-slate-300">
-        <span className="rounded-full border border-slate-700 bg-slate-800 px-3 py-1">
-          Status: <strong className="text-white">{status}</strong>
-        </span>
-        <span className="rounded-full border border-slate-700 bg-slate-800 px-3 py-1">
-          Workflow: {WORKFLOW_ID}
-        </span>
+      {/* ── Status badges ── */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "8px",
+          marginBottom: "20px",
+        }}
+      >
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "7px",
+            padding: "5px 14px",
+            borderRadius: "999px",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            fontSize: "12.5px",
+            color: "rgba(226,232,240,0.8)",
+          }}
+        >
+          <span
+            style={{
+              width: "7px", height: "7px",
+              borderRadius: "50%",
+              background: status === "Parado" ? "#64748b" : "#22c55e",
+              animation: status !== "Parado" ? "hst-dot-blink 1.2s ease-in-out infinite" : "none",
+              display: "inline-block",
+            }}
+          />
+          <strong style={{ color: "#fff", fontWeight: 600 }}>{status}</strong>
+        </div>
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            padding: "5px 14px",
+            borderRadius: "999px",
+            background: "rgba(29,78,216,0.1)",
+            border: "1px solid rgba(29,78,216,0.25)",
+            fontSize: "12px",
+            color: "#93c5fd",
+          }}
+        >
+          🔄 {WORKFLOW_ID}
+        </div>
       </div>
 
-      <div className={`mb-4 rounded-xl border p-3 ${safetyToneClass}`}>
-        <p className={`text-sm font-semibold uppercase tracking-[0.18em] ${safetyTextClass}`}>
-          {safetyStatus.title}
-        </p>
-        <p className="mt-1 text-sm text-slate-200">{safetyStatus.message}</p>
+      {/* ── Safety banner ── */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+          padding: "16px 20px",
+          borderRadius: "14px",
+          background: safetyColors.bg,
+          border: `1px solid ${safetyColors.border}`,
+          marginBottom: "20px",
+          transition: "all 0.5s ease",
+        }}
+      >
+        <div
+          style={{
+            width: "42px", height: "42px",
+            borderRadius: "12px",
+            background: `${safetyColors.border}`,
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontSize: "20px",
+            flexShrink: 0,
+          }}
+        >
+          {safetyColors.icon}
+        </div>
+        <div>
+          <p
+            style={{
+              margin: 0,
+              fontSize: "12px",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
+              color: safetyColors.text,
+            }}
+          >
+            {safetyStatus.title}
+          </p>
+          <p style={{ margin: "3px 0 0", fontSize: "13.5px", color: "rgba(226,232,240,0.75)" }}>
+            {safetyStatus.message}
+          </p>
+        </div>
       </div>
 
+      {/* ── Error banner ── */}
       {error ? (
-        <div className="mb-4 rounded-lg border border-red-500/40 bg-red-500/10 p-3 text-sm text-red-200">
-          {error}
+        <div
+          style={{
+            padding: "12px 16px",
+            borderRadius: "10px",
+            background: "rgba(239,68,68,0.08)",
+            border: "1px solid rgba(239,68,68,0.3)",
+            fontSize: "13px",
+            color: "#fca5a5",
+            marginBottom: "20px",
+          }}
+        >
+          ⚠️ {error}
         </div>
       ) : null}
 
-      <div className="relative overflow-hidden rounded-xl border border-slate-700 bg-black">
+      {/* ── Video feed ── */}
+      <div
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          borderRadius: "14px",
+          border: "1px solid rgba(255,255,255,0.1)",
+          background: "#000",
+          boxShadow: "inset 0 0 40px rgba(0,0,0,0.6)",
+        }}
+      >
+        {/* Corner accents */}
+        {[
+          { top: 0, left: 0, borderTop: "2px solid #f97316", borderLeft: "2px solid #f97316", borderRadius: "14px 0 0 0" },
+          { top: 0, right: 0, borderTop: "2px solid #f97316", borderRight: "2px solid #f97316", borderRadius: "0 14px 0 0" },
+          { bottom: 0, left: 0, borderBottom: "2px solid #f97316", borderLeft: "2px solid #f97316", borderRadius: "0 0 0 14px" },
+          { bottom: 0, right: 0, borderBottom: "2px solid #f97316", borderRight: "2px solid #f97316", borderRadius: "0 0 14px 0" },
+        ].map((s, i) => (
+          <div key={i} style={{ position: "absolute", width: "20px", height: "20px", zIndex: 10, ...s }} />
+        ))}
+
+        {/* Scan line (only while active) */}
+        {status !== "Parado" && (
+          <div className="scan-overlay" style={{ zIndex: 5 }} />
+        )}
+
         <video
           ref={videoRef}
           autoPlay
           playsInline
           muted
-          className="block h-[420px] w-full object-cover md:h-[520px]"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "clamp(300px, 52vw, 520px)",
+            objectFit: "cover",
+          }}
         />
         <canvas
           ref={canvasRef}
-          className="pointer-events-none absolute inset-0 h-full w-full"
+          style={{
+            pointerEvents: "none",
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+          }}
         />
       </div>
 
-      <div className="mt-4 grid gap-3 md:grid-cols-2">
-        <div className="rounded-xl border border-slate-700 bg-slate-950 p-4">
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-            Detecções
-          </h3>
+      {/* ── Bottom grid ── */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "16px",
+          marginTop: "20px",
+        }}
+      >
+        {/* Detecções */}
+        <div
+          className="glass-card"
+          style={{ padding: "20px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              marginBottom: "16px",
+            }}
+          >
+            <div
+              style={{
+                width: "28px", height: "28px",
+                borderRadius: "8px",
+                background: "rgba(249,115,22,0.15)",
+                border: "1px solid rgba(249,115,22,0.25)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "13px",
+              }}
+            >
+              🎯
+            </div>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "12px",
+                fontWeight: 700,
+                letterSpacing: "0.07em",
+                textTransform: "uppercase",
+                color: "rgba(226,232,240,0.6)",
+              }}
+            >
+              Detecções
+            </h3>
+            {detections.length > 0 && (
+              <span
+                style={{
+                  marginLeft: "auto",
+                  padding: "2px 8px",
+                  borderRadius: "999px",
+                  background: "rgba(249,115,22,0.15)",
+                  border: "1px solid rgba(249,115,22,0.3)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#fb923c",
+                }}
+              >
+                {detections.length}
+              </span>
+            )}
+          </div>
 
           {detections.length === 0 ? (
-            <p className="text-sm text-slate-400">Nenhuma detecção ativa no momento.</p>
+            <div
+              style={{
+                padding: "24px 0",
+                textAlign: "center",
+                color: "rgba(100,116,139,0.8)",
+                fontSize: "13px",
+              }}
+            >
+              <div style={{ fontSize: "28px", marginBottom: "8px", opacity: 0.4 }}>📷</div>
+              Nenhuma detecção ativa no momento
+            </div>
           ) : (
-            <ul className="space-y-2">
+            <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
               {detections.map((item) => (
-                <li key={item.id} className="rounded-lg border border-slate-700 bg-slate-900 p-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <strong className="text-white">{item.label}</strong>
-                    <span className="text-orange-300">{item.confidence.toFixed(1)}%</span>
+                <li
+                  key={item.id}
+                  style={{
+                    padding: "12px 14px",
+                    borderRadius: "10px",
+                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid rgba(255,255,255,0.07)",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
+                    <strong style={{ color: "#fff", fontSize: "14px", fontWeight: 600 }}>{item.label}</strong>
+                    <span
+                      style={{
+                        padding: "2px 8px",
+                        borderRadius: "6px",
+                        background: "rgba(249,115,22,0.15)",
+                        color: "#fb923c",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {item.confidence.toFixed(1)}%
+                    </span>
                   </div>
-                  <div className="mt-2 text-xs text-slate-300">
-                    Bounding box: {item.box ? `${Math.round(item.box.left)}, ${Math.round(item.box.top)}, ${Math.round(item.box.width)}, ${Math.round(item.box.height)}` : "-"}
+                  {/* Confidence bar */}
+                  <div style={{ height: "4px", borderRadius: "4px", background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
+                    <div
+                      style={{
+                        height: "100%",
+                        width: `${item.confidence}%`,
+                        borderRadius: "4px",
+                        background: "linear-gradient(90deg, #f97316, #fbbf24)",
+                        transition: "width 0.4s ease",
+                      }}
+                    />
                   </div>
-                  <div className="mt-1 text-xs text-slate-400">
-                    Posição: {item.box ? `x=${Math.round(item.box.left)} y=${Math.round(item.box.top)}` : "-"}
+                  <div style={{ marginTop: "6px", fontSize: "11px", color: "rgba(100,116,139,0.8)" }}>
+                    {item.box ? `x=${Math.round(item.box.left)}  y=${Math.round(item.box.top)}  ${Math.round(item.box.width)}×${Math.round(item.box.height)}px` : "—"}
                   </div>
                 </li>
               ))}
@@ -567,12 +839,58 @@ function RoboflowCamera() {
           )}
         </div>
 
-        <div className="rounded-xl border border-slate-700 bg-slate-950 p-4">
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
-            Payload bruto
-          </h3>
-          <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs text-slate-300">
-            {liveData ? JSON.stringify(liveData, null, 2) : "Ainda sem dados do workflow."}
+        {/* Live data */}
+        <div
+          className="glass-card"
+          style={{ padding: "20px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              marginBottom: "16px",
+            }}
+          >
+            <div
+              style={{
+                width: "28px", height: "28px",
+                borderRadius: "8px",
+                background: "rgba(29,78,216,0.15)",
+                border: "1px solid rgba(29,78,216,0.25)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "13px",
+              }}
+            >
+              📡
+            </div>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "12px",
+                fontWeight: 700,
+                letterSpacing: "0.07em",
+                textTransform: "uppercase",
+                color: "rgba(226,232,240,0.6)",
+              }}
+            >
+              Payload em tempo real
+            </h3>
+          </div>
+          <pre
+            style={{
+              maxHeight: "320px",
+              overflow: "auto",
+              whiteSpace: "pre-wrap",
+              wordBreak: "break-word",
+              fontSize: "11.5px",
+              color: "rgba(147,197,253,0.75)",
+              fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+              margin: 0,
+              lineHeight: 1.6,
+            }}
+          >
+            {liveData ? JSON.stringify(liveData, null, 2) : "// Sem dados — inicie a câmera"}
           </pre>
         </div>
       </div>
@@ -581,3 +899,4 @@ function RoboflowCamera() {
 }
 
 export default RoboflowCamera;
+

@@ -85,3 +85,552 @@
 [2026-08-19T11:46:40.341Z] Request raw body length: 28184
 [2026-08-19T11:46:42.056Z] Response Status: 200
 [2026-08-19T11:46:42.057Z] Response Data: {"outputs":[{"predictions":{"image":{"width":640,"height":480},"predictions":[{"width":294,"height":230,"x":356,"y":365,"confidence":0.8125,"class_id":2,"class":"vest","detection_id":"a390a5af-3da8-4b5a-b9ea-a6ae7f68b6e8","parent_id":"image","rle_mask":{"size":[480,640],"counts":"XYR3e0Q>l0XOa0dESNm6_2kF^M\\O3[16Z8`2\\FTN0[Ob05n8m3nFVLo8o4M3O1O100O100O100O2O000O100O10000O011O0O01000O10000O10000O100000000O1000000O100O10000O011O0O100O100O10000O100O100O100O100O10000O100O100O10000O10000O10000O100O10...
+[2026-08-19T18:07:47.791Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: true
+[2026-08-19T18:09:52.602Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:52.606Z] Request raw body length: 40812
+[2026-08-19T18:09:52.763Z] Response Status: 500
+[2026-08-19T18:09:52.765Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:53.019Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:53.026Z] Request raw body length: 40768
+[2026-08-19T18:09:53.042Z] Response Status: 500
+[2026-08-19T18:09:53.043Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:53.400Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:53.404Z] Request raw body length: 39976
+[2026-08-19T18:09:53.417Z] Response Status: 500
+[2026-08-19T18:09:53.418Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:53.802Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:53.804Z] Request raw body length: 40092
+[2026-08-19T18:09:53.813Z] Response Status: 500
+[2026-08-19T18:09:53.816Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:54.197Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:54.198Z] Request raw body length: 39772
+[2026-08-19T18:09:54.207Z] Response Status: 500
+[2026-08-19T18:09:54.208Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:54.598Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:54.600Z] Request raw body length: 39820
+[2026-08-19T18:09:54.608Z] Response Status: 500
+[2026-08-19T18:09:54.609Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:55.005Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:55.006Z] Request raw body length: 39524
+[2026-08-19T18:09:55.015Z] Response Status: 500
+[2026-08-19T18:09:55.016Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:55.404Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:55.407Z] Request raw body length: 39616
+[2026-08-19T18:09:55.417Z] Response Status: 500
+[2026-08-19T18:09:55.417Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:55.805Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:55.813Z] Request raw body length: 39600
+[2026-08-19T18:09:55.843Z] Response Status: 500
+[2026-08-19T18:09:55.977Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:56.210Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:56.212Z] Request raw body length: 40116
+[2026-08-19T18:09:56.223Z] Response Status: 500
+[2026-08-19T18:09:56.224Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:56.599Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:56.600Z] Request raw body length: 39880
+[2026-08-19T18:09:56.609Z] Response Status: 500
+[2026-08-19T18:09:56.609Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:57.005Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:57.006Z] Request raw body length: 39816
+[2026-08-19T18:09:57.015Z] Response Status: 500
+[2026-08-19T18:09:57.016Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:57.412Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:57.426Z] Request raw body length: 39728
+[2026-08-19T18:09:57.709Z] Response Status: 500
+[2026-08-19T18:09:57.710Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:57.803Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:57.807Z] Request raw body length: 39876
+[2026-08-19T18:09:57.827Z] Response Status: 500
+[2026-08-19T18:09:57.828Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:58.201Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:58.203Z] Request raw body length: 39736
+[2026-08-19T18:09:58.235Z] Response Status: 500
+[2026-08-19T18:09:58.242Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:58.602Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:58.605Z] Request raw body length: 39372
+[2026-08-19T18:09:58.619Z] Response Status: 500
+[2026-08-19T18:09:58.620Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:59.013Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:59.017Z] Request raw body length: 39676
+[2026-08-19T18:09:59.031Z] Response Status: 500
+[2026-08-19T18:09:59.031Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:59.399Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:59.401Z] Request raw body length: 39748
+[2026-08-19T18:09:59.416Z] Response Status: 500
+[2026-08-19T18:09:59.417Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:09:59.805Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:09:59.806Z] Request raw body length: 39564
+[2026-08-19T18:09:59.814Z] Response Status: 500
+[2026-08-19T18:09:59.816Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:00.210Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:00.211Z] Request raw body length: 39620
+[2026-08-19T18:10:00.224Z] Response Status: 500
+[2026-08-19T18:10:00.225Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:00.600Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:00.601Z] Request raw body length: 39688
+[2026-08-19T18:10:00.610Z] Response Status: 500
+[2026-08-19T18:10:00.610Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:01.105Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:01.107Z] Request raw body length: 39608
+[2026-08-19T18:10:01.312Z] Response Status: 500
+[2026-08-19T18:10:01.313Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:01.400Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:01.408Z] Request raw body length: 39808
+[2026-08-19T18:10:01.417Z] Response Status: 500
+[2026-08-19T18:10:01.418Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:01.816Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:01.820Z] Request raw body length: 40220
+[2026-08-19T18:10:02.122Z] Response Status: 500
+[2026-08-19T18:10:02.125Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:02.214Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:02.217Z] Request raw body length: 40292
+[2026-08-19T18:10:02.228Z] Response Status: 500
+[2026-08-19T18:10:02.229Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:02.602Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:02.603Z] Request raw body length: 39860
+[2026-08-19T18:10:02.612Z] Response Status: 500
+[2026-08-19T18:10:02.613Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:02.999Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:03.008Z] Request raw body length: 39852
+[2026-08-19T18:10:03.017Z] Response Status: 500
+[2026-08-19T18:10:03.020Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:03.402Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:03.404Z] Request raw body length: 39836
+[2026-08-19T18:10:03.417Z] Response Status: 500
+[2026-08-19T18:10:03.418Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:03.808Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:03.809Z] Request raw body length: 39764
+[2026-08-19T18:10:03.821Z] Response Status: 500
+[2026-08-19T18:10:03.822Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:04.214Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:04.215Z] Request raw body length: 39888
+[2026-08-19T18:10:04.226Z] Response Status: 500
+[2026-08-19T18:10:04.227Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:04.607Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:04.608Z] Request raw body length: 39888
+[2026-08-19T18:10:04.615Z] Response Status: 500
+[2026-08-19T18:10:04.616Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:05.201Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:05.203Z] Request raw body length: 38020
+[2026-08-19T18:10:05.334Z] Response Status: 500
+[2026-08-19T18:10:05.338Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:06.123Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:06.124Z] Request raw body length: 37256
+[2026-08-19T18:10:06.133Z] Response Status: 500
+[2026-08-19T18:10:06.134Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:07.106Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:07.107Z] Request raw body length: 37628
+[2026-08-19T18:10:07.119Z] Response Status: 500
+[2026-08-19T18:10:07.119Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:08.104Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:08.105Z] Request raw body length: 37392
+[2026-08-19T18:10:08.119Z] Response Status: 500
+[2026-08-19T18:10:08.120Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:09.121Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:09.122Z] Request raw body length: 38136
+[2026-08-19T18:10:09.130Z] Response Status: 500
+[2026-08-19T18:10:09.130Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:10.107Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:10.108Z] Request raw body length: 37952
+[2026-08-19T18:10:10.121Z] Response Status: 500
+[2026-08-19T18:10:10.121Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:11.100Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:11.102Z] Request raw body length: 37972
+[2026-08-19T18:10:11.109Z] Response Status: 500
+[2026-08-19T18:10:11.110Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:12.115Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:12.116Z] Request raw body length: 37484
+[2026-08-19T18:10:12.124Z] Response Status: 500
+[2026-08-19T18:10:12.124Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:13.105Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:13.107Z] Request raw body length: 37684
+[2026-08-19T18:10:13.119Z] Response Status: 500
+[2026-08-19T18:10:13.120Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:14.109Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:14.110Z] Request raw body length: 37664
+[2026-08-19T18:10:14.117Z] Response Status: 500
+[2026-08-19T18:10:14.119Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:15.143Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:15.145Z] Request raw body length: 37696
+[2026-08-19T18:10:15.153Z] Response Status: 500
+[2026-08-19T18:10:15.154Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:16.109Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:16.110Z] Request raw body length: 37536
+[2026-08-19T18:10:16.124Z] Response Status: 500
+[2026-08-19T18:10:16.125Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:17.110Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:17.111Z] Request raw body length: 37436
+[2026-08-19T18:10:17.123Z] Response Status: 500
+[2026-08-19T18:10:17.124Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:18.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:18.114Z] Request raw body length: 37648
+[2026-08-19T18:10:18.122Z] Response Status: 500
+[2026-08-19T18:10:18.123Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:19.114Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:19.116Z] Request raw body length: 37544
+[2026-08-19T18:10:19.123Z] Response Status: 500
+[2026-08-19T18:10:19.123Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:20.104Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:20.106Z] Request raw body length: 37708
+[2026-08-19T18:10:20.114Z] Response Status: 500
+[2026-08-19T18:10:20.115Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:21.104Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:21.105Z] Request raw body length: 37592
+[2026-08-19T18:10:21.117Z] Response Status: 500
+[2026-08-19T18:10:21.118Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:22.111Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:22.113Z] Request raw body length: 37340
+[2026-08-19T18:10:22.128Z] Response Status: 500
+[2026-08-19T18:10:22.129Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:23.119Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:23.120Z] Request raw body length: 36920
+[2026-08-19T18:10:23.140Z] Response Status: 500
+[2026-08-19T18:10:23.141Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:24.178Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:24.180Z] Request raw body length: 37964
+[2026-08-19T18:10:24.187Z] Response Status: 500
+[2026-08-19T18:10:24.188Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:25.284Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:25.290Z] Request raw body length: 38220
+[2026-08-19T18:10:25.298Z] Response Status: 500
+[2026-08-19T18:10:25.299Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:26.108Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:26.109Z] Request raw body length: 37932
+[2026-08-19T18:10:26.117Z] Response Status: 500
+[2026-08-19T18:10:26.117Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:27.114Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:27.115Z] Request raw body length: 36276
+[2026-08-19T18:10:27.126Z] Response Status: 500
+[2026-08-19T18:10:27.128Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:28.101Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:28.102Z] Request raw body length: 36948
+[2026-08-19T18:10:28.116Z] Response Status: 500
+[2026-08-19T18:10:28.117Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:29.101Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:29.102Z] Request raw body length: 36976
+[2026-08-19T18:10:29.110Z] Response Status: 500
+[2026-08-19T18:10:29.110Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:30.105Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:30.106Z] Request raw body length: 37296
+[2026-08-19T18:10:30.119Z] Response Status: 500
+[2026-08-19T18:10:30.119Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:31.115Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:31.116Z] Request raw body length: 37320
+[2026-08-19T18:10:31.322Z] Response Status: 500
+[2026-08-19T18:10:31.324Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:32.210Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:32.212Z] Request raw body length: 37788
+[2026-08-19T18:10:32.287Z] Response Status: 500
+[2026-08-19T18:10:32.288Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:33.124Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:33.126Z] Request raw body length: 37724
+[2026-08-19T18:10:33.156Z] Response Status: 500
+[2026-08-19T18:10:33.156Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:34.115Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:34.116Z] Request raw body length: 37744
+[2026-08-19T18:10:34.155Z] Response Status: 500
+[2026-08-19T18:10:34.156Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:35.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:35.114Z] Request raw body length: 37888
+[2026-08-19T18:10:35.136Z] Response Status: 500
+[2026-08-19T18:10:35.137Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:36.106Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:36.107Z] Request raw body length: 37784
+[2026-08-19T18:10:36.116Z] Response Status: 500
+[2026-08-19T18:10:36.116Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:37.102Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:37.104Z] Request raw body length: 37896
+[2026-08-19T18:10:37.116Z] Response Status: 500
+[2026-08-19T18:10:37.117Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:38.140Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:38.142Z] Request raw body length: 37948
+[2026-08-19T18:10:38.170Z] Response Status: 500
+[2026-08-19T18:10:38.171Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:38.321Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:38.322Z] Request raw body length: 37964
+[2026-08-19T18:10:38.355Z] Response Status: 500
+[2026-08-19T18:10:38.357Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:38.609Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:38.611Z] Request raw body length: 37832
+[2026-08-19T18:10:38.626Z] Response Status: 500
+[2026-08-19T18:10:38.627Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:39.020Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:39.022Z] Request raw body length: 37632
+[2026-08-19T18:10:39.122Z] Response Status: 500
+[2026-08-19T18:10:39.124Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:39.405Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:39.406Z] Request raw body length: 40084
+[2026-08-19T18:10:39.414Z] Response Status: 500
+[2026-08-19T18:10:39.414Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:39.806Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:39.808Z] Request raw body length: 39632
+[2026-08-19T18:10:39.817Z] Response Status: 500
+[2026-08-19T18:10:39.818Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:40.203Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:40.204Z] Request raw body length: 39208
+[2026-08-19T18:10:40.212Z] Response Status: 500
+[2026-08-19T18:10:40.213Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:40.602Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:40.603Z] Request raw body length: 38412
+[2026-08-19T18:10:40.615Z] Response Status: 500
+[2026-08-19T18:10:40.615Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:41.001Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:41.003Z] Request raw body length: 38952
+[2026-08-19T18:10:41.017Z] Response Status: 500
+[2026-08-19T18:10:41.022Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T18:10:41.399Z] Request received: POST /api/infer-workflow
+[2026-08-19T18:10:41.400Z] Request raw body length: 38928
+[2026-08-19T18:10:41.407Z] Response Status: 500
+[2026-08-19T18:10:41.408Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:21:22.373Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: true
+[2026-08-19T19:23:41.523Z] Request received: POST /api/init-webrtc
+[2026-08-19T19:23:41.529Z] Request raw body length: 6435
+[2026-08-19T19:23:52.675Z] Response Status: 500
+[2026-08-19T19:23:52.676Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:23:53.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:23:53.115Z] Request raw body length: 34880
+[2026-08-19T19:23:53.543Z] Response Status: 500
+[2026-08-19T19:23:53.546Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:23:53.914Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:23:53.917Z] Request raw body length: 34728
+[2026-08-19T19:24:04.616Z] Response Status: 500
+[2026-08-19T19:24:04.618Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:24:04.717Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:24:04.719Z] Request raw body length: 34664
+[2026-08-19T19:24:05.616Z] Response Status: 500
+[2026-08-19T19:24:05.737Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:24:05.918Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:24:05.924Z] Request raw body length: 35052
+[2026-08-19T19:24:16.727Z] Response Status: 500
+[2026-08-19T19:24:16.729Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:24:17.138Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:24:17.139Z] Request raw body length: 34416
+[2026-08-19T19:24:17.586Z] Response Status: 500
+[2026-08-19T19:24:17.587Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:24:17.908Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:24:17.910Z] Request raw body length: 34532
+[2026-08-19T19:24:30.002Z] Response Status: 500
+[2026-08-19T19:24:30.015Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:28:17.066Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: true
+[2026-08-19T19:29:04.348Z] Request received: POST /api/init-webrtc
+[2026-08-19T19:29:04.473Z] Request raw body length: 6437
+[2026-08-19T19:29:15.631Z] Response Status: 500
+[2026-08-19T19:29:15.631Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:16.080Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:16.083Z] Request raw body length: 34848
+[2026-08-19T19:29:16.473Z] Response Status: 500
+[2026-08-19T19:29:16.476Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:16.866Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:16.868Z] Request raw body length: 35108
+[2026-08-19T19:29:27.646Z] Response Status: 500
+[2026-08-19T19:29:27.647Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:28.067Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:28.069Z] Request raw body length: 34924
+[2026-08-19T19:29:28.447Z] Response Status: 500
+[2026-08-19T19:29:28.450Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:28.871Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:28.906Z] Request raw body length: 34884
+[2026-08-19T19:29:39.637Z] Response Status: 500
+[2026-08-19T19:29:39.639Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:40.069Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:40.073Z] Request raw body length: 34380
+[2026-08-19T19:29:40.490Z] Response Status: 500
+[2026-08-19T19:29:40.491Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:40.862Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:40.864Z] Request raw body length: 34720
+[2026-08-19T19:29:51.538Z] Response Status: 500
+[2026-08-19T19:29:51.539Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:51.670Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:51.672Z] Request raw body length: 35040
+[2026-08-19T19:29:52.451Z] Response Status: 500
+[2026-08-19T19:29:52.454Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:29:52.866Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:29:52.868Z] Request raw body length: 35040
+[2026-08-19T19:30:03.565Z] Response Status: 500
+[2026-08-19T19:30:03.566Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:04.106Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:04.107Z] Request raw body length: 34260
+[2026-08-19T19:30:04.442Z] Response Status: 500
+[2026-08-19T19:30:04.443Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:05.121Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:05.122Z] Request raw body length: 34472
+[2026-08-19T19:30:15.809Z] Response Status: 500
+[2026-08-19T19:30:15.810Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:16.116Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:16.118Z] Request raw body length: 34948
+[2026-08-19T19:30:16.724Z] Response Status: 500
+[2026-08-19T19:30:16.726Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:17.114Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:17.116Z] Request raw body length: 33912
+[2026-08-19T19:30:27.364Z] Response Status: 500
+[2026-08-19T19:30:27.365Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:27.670Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:27.672Z] Request raw body length: 34548
+[2026-08-19T19:30:28.662Z] Response Status: 500
+[2026-08-19T19:30:28.665Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:30:28.868Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:30:28.869Z] Request raw body length: 34640
+[2026-08-19T19:30:40.081Z] Response Status: 500
+[2026-08-19T19:30:40.090Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:13.970Z] Request received: POST /api/init-webrtc
+[2026-08-19T19:33:13.971Z] Request raw body length: 6433
+[2026-08-19T19:33:24.686Z] Response Status: 500
+[2026-08-19T19:33:24.687Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:25.129Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:25.131Z] Request raw body length: 34956
+[2026-08-19T19:33:25.546Z] Response Status: 500
+[2026-08-19T19:33:25.547Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:25.922Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:25.925Z] Request raw body length: 35116
+[2026-08-19T19:33:36.673Z] Response Status: 500
+[2026-08-19T19:33:36.676Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:36.728Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:36.730Z] Request raw body length: 35116
+[2026-08-19T19:33:37.580Z] Response Status: 500
+[2026-08-19T19:33:37.581Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:38.150Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:38.152Z] Request raw body length: 34916
+[2026-08-19T19:33:48.786Z] Response Status: 500
+[2026-08-19T19:33:48.789Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:49.094Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:49.096Z] Request raw body length: 35016
+[2026-08-19T19:33:49.736Z] Response Status: 500
+[2026-08-19T19:33:49.739Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:33:50.131Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:33:50.132Z] Request raw body length: 34948
+[2026-08-19T19:34:01.032Z] Response Status: 500
+[2026-08-19T19:34:01.033Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:01.120Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:01.122Z] Request raw body length: 35048
+[2026-08-19T19:34:01.718Z] Response Status: 500
+[2026-08-19T19:34:01.721Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:01.919Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:01.921Z] Request raw body length: 34932
+[2026-08-19T19:34:12.424Z] Response Status: 500
+[2026-08-19T19:34:12.425Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:13.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:13.114Z] Request raw body length: 34784
+[2026-08-19T19:34:13.500Z] Response Status: 500
+[2026-08-19T19:34:13.501Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:14.118Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:14.119Z] Request raw body length: 34816
+[2026-08-19T19:34:25.014Z] Response Status: 500
+[2026-08-19T19:34:25.017Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:25.142Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:25.145Z] Request raw body length: 35116
+[2026-08-19T19:34:25.691Z] Response Status: 500
+[2026-08-19T19:34:25.692Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:26.106Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:26.109Z] Request raw body length: 34836
+[2026-08-19T19:34:36.489Z] Response Status: 500
+[2026-08-19T19:34:36.490Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:37.102Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:37.104Z] Request raw body length: 35044
+[2026-08-19T19:34:37.647Z] Response Status: 500
+[2026-08-19T19:34:37.648Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:38.105Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:38.106Z] Request raw body length: 34968
+[2026-08-19T19:34:48.432Z] Response Status: 500
+[2026-08-19T19:34:48.433Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:48.743Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:48.744Z] Request raw body length: 35164
+[2026-08-19T19:34:49.664Z] Response Status: 500
+[2026-08-19T19:34:49.667Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:34:50.106Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:34:50.107Z] Request raw body length: 34900
+[2026-08-19T19:35:00.979Z] Response Status: 500
+[2026-08-19T19:35:00.980Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:35:01.140Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:35:01.141Z] Request raw body length: 35116
+[2026-08-19T19:35:01.691Z] Response Status: 500
+[2026-08-19T19:35:01.693Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:35:01.928Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:35:01.929Z] Request raw body length: 35172
+[2026-08-19T19:35:12.309Z] Response Status: 500
+[2026-08-19T19:35:12.319Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:36:31.340Z] Request received: POST /api/init-webrtc
+[2026-08-19T19:36:31.341Z] Request raw body length: 6435
+[2026-08-19T19:36:42.044Z] Response Status: 500
+[2026-08-19T19:36:42.045Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:36:42.485Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:36:42.487Z] Request raw body length: 35064
+[2026-08-19T19:36:42.918Z] Response Status: 500
+[2026-08-19T19:36:42.919Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:36:43.277Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:36:43.279Z] Request raw body length: 35116
+[2026-08-19T19:36:53.877Z] Response Status: 500
+[2026-08-19T19:36:53.878Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:36:54.083Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:36:54.085Z] Request raw body length: 35048
+[2026-08-19T19:36:54.825Z] Response Status: 500
+[2026-08-19T19:36:54.826Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:36:54.876Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:36:54.877Z] Request raw body length: 34972
+[2026-08-19T19:37:05.474Z] Response Status: 500
+[2026-08-19T19:37:05.475Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:06.118Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:06.120Z] Request raw body length: 34388
+[2026-08-19T19:37:06.421Z] Response Status: 500
+[2026-08-19T19:37:06.422Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:07.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:07.114Z] Request raw body length: 34608
+[2026-08-19T19:37:17.786Z] Response Status: 500
+[2026-08-19T19:37:17.789Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:18.111Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:18.113Z] Request raw body length: 35548
+[2026-08-19T19:37:18.679Z] Response Status: 500
+[2026-08-19T19:37:18.679Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:19.103Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:19.104Z] Request raw body length: 35316
+[2026-08-19T19:37:29.219Z] Response Status: 500
+[2026-08-19T19:37:29.220Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:30.116Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:30.117Z] Request raw body length: 34276
+[2026-08-19T19:37:30.674Z] Response Status: 500
+[2026-08-19T19:37:30.737Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:31.114Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:31.115Z] Request raw body length: 35076
+[2026-08-19T19:37:41.235Z] Response Status: 500
+[2026-08-19T19:37:41.237Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:42.122Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:42.124Z] Request raw body length: 35280
+[2026-08-19T19:37:42.659Z] Response Status: 500
+[2026-08-19T19:37:42.660Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:43.096Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:43.097Z] Request raw body length: 34172
+[2026-08-19T19:37:53.311Z] Response Status: 500
+[2026-08-19T19:37:53.312Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:54.167Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:54.168Z] Request raw body length: 35248
+[2026-08-19T19:37:54.629Z] Response Status: 500
+[2026-08-19T19:37:54.630Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:37:55.105Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:37:55.106Z] Request raw body length: 35296
+[2026-08-19T19:38:05.927Z] Response Status: 500
+[2026-08-19T19:38:05.928Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:10.066Z] Request received: POST /api/init-webrtc
+[2026-08-19T19:38:10.067Z] Request raw body length: 6435
+[2026-08-19T19:38:20.832Z] Response Status: 500
+[2026-08-19T19:38:20.878Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:22.120Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:22.121Z] Request raw body length: 35056
+[2026-08-19T19:38:33.238Z] Response Status: 500
+[2026-08-19T19:38:33.249Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:33.413Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:33.415Z] Request raw body length: 35156
+[2026-08-19T19:38:33.827Z] Response Status: 500
+[2026-08-19T19:38:33.828Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:34.206Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:34.207Z] Request raw body length: 35124
+[2026-08-19T19:38:44.956Z] Response Status: 500
+[2026-08-19T19:38:44.957Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:46.133Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:46.134Z] Request raw body length: 35484
+[2026-08-19T19:38:56.736Z] Response Status: 500
+[2026-08-19T19:38:56.737Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:57.116Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:57.117Z] Request raw body length: 35184
+[2026-08-19T19:38:57.690Z] Response Status: 500
+[2026-08-19T19:38:57.690Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:38:58.103Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:38:58.104Z] Request raw body length: 35384
