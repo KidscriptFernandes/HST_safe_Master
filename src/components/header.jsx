@@ -100,7 +100,7 @@ function AppHeader() {
           }}
           className="hidden md:flex"
         >
-          {["Início", "Detecção", "Relatórios", "Configurações"].map((item) => (
+          {[""].map((item) => (
             <a
               key={item}
               href="#"
@@ -129,32 +129,6 @@ function AppHeader() {
 
         {/* ── Right side ── */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          {/* Live badge */}
-          <div
-            className="hidden md:flex"
-            style={{
-              alignItems: "center",
-              gap: "7px",
-              padding: "5px 13px",
-              borderRadius: "999px",
-              background: "rgba(34,197,94,0.1)",
-              border: "1px solid rgba(34,197,94,0.25)",
-              fontSize: "12px",
-              fontWeight: 600,
-              color: "#4ade80",
-            }}
-          >
-            <span
-              style={{
-                width: "7px", height: "7px",
-                borderRadius: "50%",
-                background: "#22c55e",
-                animation: "hst-dot-blink 1.2s ease-in-out infinite",
-                display: "inline-block",
-              }}
-            />
-            Sistema Ativo
-          </div>
 
           {/* User avatar */}
           <div
@@ -225,4 +199,4 @@ function AppHeader() {
   );
 }
 
-export default AppHeader;
+export default AppHeader;

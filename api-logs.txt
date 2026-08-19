@@ -634,3 +634,18 @@
 [2026-08-19T19:38:57.690Z] Response Data: {"message":"fetch failed"}...
 [2026-08-19T19:38:58.103Z] Request received: POST /api/infer-workflow
 [2026-08-19T19:38:58.104Z] Request raw body length: 35384
+[2026-08-19T19:39:08.433Z] Response Status: 500
+[2026-08-19T19:39:08.434Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:39:09.113Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:39:09.114Z] Request raw body length: 34804
+[2026-08-19T19:39:09.682Z] Response Status: 500
+[2026-08-19T19:39:09.684Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:39:10.154Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:39:10.157Z] Request raw body length: 34728
+[2026-08-19T19:39:21.129Z] Response Status: 500
+[2026-08-19T19:39:21.131Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:39:22.117Z] Request received: POST /api/infer-workflow
+[2026-08-19T19:39:22.118Z] Request raw body length: 35024
+[2026-08-19T19:39:32.982Z] Response Status: 500
+[2026-08-19T19:39:32.990Z] Response Data: {"message":"fetch failed"}...
+[2026-08-19T19:48:31.987Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: true
