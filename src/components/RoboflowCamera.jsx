@@ -3,7 +3,7 @@ import { connectors, webrtc, streams } from "@roboflow/inference-sdk";
 
 const WORKSPACE_NAME = "filipe-fernandes-kdy8u";
 const WORKFLOW_ID = "find-helmet-jacket-and-more";
-const EXPECTED_EPI_CLASSES = ["helmet", "jacket"];
+const EXPECTED_EPI_CLASSES = ["helmet", "jacket","vest"];
 
 function toNumber(value, fallback = 0) {
   const numericValue = Number(value);
@@ -12,6 +12,27 @@ function toNumber(value, fallback = 0) {
 
 function normalizePredictionList(payload) {
   if (!payload) return [];
+
+  if (payload.outputs) {
+    if (Array.isArray(payload.outputs)) {
+      for (const out of payload.outputs) {
+        const result = normalizePredictionList(out);
+        if (result.length > 0) return result;
+      }
+    } else {
+      if (Array.isArray(payload.outputs.predictions)) {
+        return payload.outputs.predictions;
+      }
+      for (const key in payload.outputs) {
+        if (payload.outputs[key] && Array.isArray(payload.outputs[key].predictions)) {
+          return payload.outputs[key].predictions;
+        }
+        if (Array.isArray(payload.outputs[key])) {
+          return payload.outputs[key];
+        }
+      }
+    }
+  }
 
   if (Array.isArray(payload)) return payload;
 
@@ -189,6 +210,7 @@ function RoboflowCamera() {
   const canvasRef = useRef(null);
   const connectionRef = useRef(null);
   const streamRef = useRef(null);
+  const httpIntervalRef = useRef(null);
 
   const [status, setStatus] = useState("Parado");
   const [error, setError] = useState("");
@@ -254,6 +276,11 @@ function RoboflowCamera() {
 
   const stopCamera = async (silent = false) => {
     try {
+      if (httpIntervalRef.current) {
+        clearInterval(httpIntervalRef.current);
+        httpIntervalRef.current = null;
+      }
+
       connectionRef.current?.cleanup?.();
       connectionRef.current = null;
 
@@ -313,45 +340,108 @@ function RoboflowCamera() {
         await videoRef.current.play();
       }
 
-      const connector = connectors.withProxyUrl("/api/init-webrtc");
+      try {
+        const connector = connectors.withProxyUrl("/api/init-webrtc");
 
-      connectionRef.current = await webrtc.useStream({
-        source: cameraStream,
-        connector,
-        wrtcParams: {
-          workspaceName: WORKSPACE_NAME,
-          workflowId: WORKFLOW_ID,
-          streamOutputNames: [],
-          dataOutputNames: ["predictions"],
-          processingTimeout: 3600,
-          requestedPlan: "webrtc-gpu-medium",
-          requestedRegion: "us",
-        },
-        onData: (data) => {
-          console.log("Predictions recebidas do Roboflow:", data);
-          setLiveData(data);
+        connectionRef.current = await webrtc.useStream({
+          source: cameraStream,
+          connector,
+          wrtcParams: {
+            workspaceName: WORKSPACE_NAME,
+            workflowId: WORKFLOW_ID,
+            streamOutputNames: [],
+            dataOutputNames: ["predictions"],
+            processingTimeout: 3600,
+            requestedPlan: "webrtc-gpu-medium",
+            requestedRegion: "us",
+          },
+          onData: (data) => {
+            console.log("Predictions recebidas do Roboflow (WebRTC):", data);
+            setLiveData(data);
 
-          const normalizedPredictions = normalizePredictionList(data);
-          console.log("Predictions normalizadas:", normalizedPredictions);
+            const normalizedPredictions = normalizePredictionList(data);
+            console.log("Predictions normalizadas:", normalizedPredictions);
 
-          setPredictions(normalizedPredictions);
-          drawDetections();
-        },
-      });
+            setPredictions(normalizedPredictions);
+            drawDetections();
+          },
+        });
 
-      if (videoRef.current && connectionRef.current) {
-        videoRef.current.srcObject = await connectionRef.current.remoteStream();
+        if (videoRef.current && connectionRef.current) {
+          videoRef.current.srcObject = await connectionRef.current.remoteStream();
+        }
+
+        setStatus("Câmera ativa (WebRTC)");
+        setError("");
+        setSafetyStatus(getSafetySummary(predictions));
+      } catch (webrtcException) {
+        console.warn("Erro ao conectar WebRTC. Ativando fallback HTTP...", webrtcException);
+        
+        if (streamRef.current && videoRef.current) {
+          setStatus("Câmera ativa (HTTP)");
+          setError("");
+
+          const offscreenCanvas = document.createElement("canvas");
+          const offscreenCtx = offscreenCanvas.getContext("2d");
+          let isProcessing = false;
+
+          const intervalId = setInterval(async () => {
+            if (isProcessing) return;
+            const video = videoRef.current;
+            if (!video || video.paused || video.ended) return;
+
+            isProcessing = true;
+            try {
+              offscreenCanvas.width = video.videoWidth || 640;
+              offscreenCanvas.height = video.videoHeight || 480;
+              offscreenCtx.drawImage(video, 0, 0, offscreenCanvas.width, offscreenCanvas.height);
+
+              const dataUrl = offscreenCanvas.toDataURL("image/jpeg", 0.7);
+              const base64Image = dataUrl.split(",")[1];
+
+              const response = await fetch("/api/infer-workflow", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  image: base64Image,
+                  workspaceName: WORKSPACE_NAME,
+                  workflowId: WORKFLOW_ID,
+                }),
+              });
+
+              if (!response.ok) {
+                const errData = await response.json().catch(() => ({}));
+                throw new Error(errData?.message || `Erro na API: ${response.statusText}`);
+              }
+
+              const data = await response.json();
+              console.log("Predictions recebidas do Roboflow (HTTP):", data);
+              setLiveData(data);
+
+              const normalizedPredictions = normalizePredictionList(data);
+              setPredictions(normalizedPredictions);
+            } catch (err) {
+              console.error("Erro na inferência HTTP:", err);
+              setError(`Erro na análise: ${err.message}`);
+            } finally {
+              isProcessing = false;
+            }
+          }, 400);
+
+          httpIntervalRef.current = intervalId;
+          setSafetyStatus(getSafetySummary(predictions));
+        } else {
+          throw webrtcException;
+        }
       }
-
-      setStatus("Câmera ativa");
-      setError("");
-      setSafetyStatus(getSafetySummary(predictions));
     } catch (exception) {
-      console.error("Erro ao iniciar o WebRTC do Roboflow:", exception);
+      console.error("Erro geral ao iniciar a câmera:", exception);
 
       const message =
         exception?.message ||
-        "Não foi possível conectar ao workflow do Roboflow.";
+        "Não foi possível iniciar a câmera ou processar o fluxo.";
 
       setError(message);
       setStatus("Erro na conexão");
