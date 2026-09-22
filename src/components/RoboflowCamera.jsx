@@ -475,13 +475,11 @@ function RoboflowCamera() {
       className="hst-fade-up"
       style={{
         width: "100%",
-        background: "rgba(15,32,64,0.6)",
+        background: "#ffffff",
         border: `1px solid ${safetyColors.border}`,
-        borderRadius: "20px",
-        padding: "28px",
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        boxShadow: `0 0 60px ${safetyColors.bg}, 0 16px 56px rgba(0,0,0,0.5)`,
+        borderRadius: "12px",
+        padding: "20px",
+        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.06)",
         transition: "box-shadow 0.5s ease, border-color 0.5s ease",
       }}
     >
@@ -504,7 +502,7 @@ function RoboflowCamera() {
               fontWeight: 700,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#fb923c",
+              color: "#c2410c",
               marginBottom: "4px",
             }}
           >
@@ -515,7 +513,7 @@ function RoboflowCamera() {
               margin: 0,
               fontSize: "22px",
               fontWeight: 800,
-              color: "#fff",
+              color: "#172033",
               letterSpacing: "-0.02em",
             }}
           >
@@ -569,10 +567,10 @@ function RoboflowCamera() {
             gap: "7px",
             padding: "5px 14px",
             borderRadius: "999px",
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.1)",
+            background: "#f8fafc",
+            border: "1px solid #e5e7eb",
             fontSize: "12.5px",
-            color: "rgba(226,232,240,0.8)",
+            color: "#475569",
           }}
         >
           <span
@@ -584,7 +582,7 @@ function RoboflowCamera() {
               display: "inline-block",
             }}
           />
-          <strong style={{ color: "#fff", fontWeight: 600 }}>{status}</strong>
+          <strong style={{ color: "#172033", fontWeight: 600 }}>{status}</strong>
         </div>
         <div
           style={{
@@ -593,10 +591,10 @@ function RoboflowCamera() {
             gap: "6px",
             padding: "5px 14px",
             borderRadius: "999px",
-            background: "rgba(29,78,216,0.1)",
-            border: "1px solid rgba(29,78,216,0.25)",
+            background: "#eff6ff",
+            border: "1px solid #bfdbfe",
             fontSize: "12px",
-            color: "#93c5fd",
+            color: "#1d4ed8",
           }}
         >
           🔄 {WORKFLOW_ID}

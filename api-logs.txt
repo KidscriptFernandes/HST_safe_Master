@@ -649,3 +649,8 @@
 [2026-08-19T19:39:32.982Z] Response Status: 500
 [2026-08-19T19:39:32.990Z] Response Data: {"message":"fetch failed"}...
 [2026-08-19T19:48:31.987Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: true
+[2026-09-22T11:12:06.200Z] Vite config loaded. Mode: production. ROBOFLOW_API_KEY present: false
+[2026-09-22T11:13:21.043Z] Vite config loaded. Mode: development. ROBOFLOW_API_KEY present: false
+[2026-09-22T11:16:42.579Z] Vite config loaded. Mode: production. ROBOFLOW_API_KEY present: false
+[2026-09-22T11:17:15.844Z] Vite config loaded. Mode: production. ROBOFLOW_API_KEY present: false
+[2026-09-22T11:21:50.843Z] Vite config loaded. Mode: production. ROBOFLOW_API_KEY present: false
